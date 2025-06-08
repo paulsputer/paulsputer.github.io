@@ -1,0 +1,107 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'paulsputer.com'
+theme = ["hugo-video", "PaperMod"]
+defaultMarkdownHandler ='goldmark'
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[params.analytics.google]
+SiteVerificationTag = "G-7H9QF7N3NN"
+
+[params.cover]
+hidden = false
+hiddenInList = false
+hiddenInSingle = false
+responseiveImages = true
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[[menu.main]]
+identifier = "posts"
+name = "posts"
+url = "/posts/"
+weight = 5
+
+[[menu.main]]
+identifier = "search"
+name = "search"
+url = "/search/"
+weight = 15
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "archive"
+name = "archive"
+url = "/archives/"
+weight = 30
+
+[params]
+env = 'production'
+ShowShareButtons = true
+mainSections = 'posts'
+
+[params.profileMode]
+enabled = true
+title = "Paul Martin"
+subtitle = "An engineering leader experienced building products from embedded to world scale across fintech, medtech and miltech"
+imageUrl = "pm-fun.jpg"
+imageWidth = 309
+imageHeight = 461
+imageTitle = "my image"
+
+[[params.profileMode.buttons]]
+name = "Posts"
+url = "posts"
+
+[[params.profileMode.buttons]]
+name = "Search"
+url = "search"
+
+[[params.socialIcons]]
+name = "x"
+url = "https://x.com/paulsputer"
+
+[[params.socialIcons]]
+name = "crunchbase"
+url = "https://www.crunchbase.com/person/paul-martin-7cc4"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/paulsputer/"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/paulsputer"
+
+
+[markup.highlight]
+noClasses = false
+
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+limit = 10
+keys = [ "title", "permalink", "summary", "content" ]
+
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
