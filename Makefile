@@ -10,10 +10,13 @@ config: ## initial config
 	git submodule update --init --recursive --remote
 	# hugo new --kind post <name>
 
-
 .PHONY: run-dev
 run-dev: ## run the site locally
 	hugo server --buildDrafts
+
+.PHONY: new-post
+new-post: ## Create a new post name={post-name}
+	hugo new content content/posts/$(name).md
 	
 .PHONY: help
 help:
