@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://paulsputer.com/'
 languageCode = 'en-us'
 title = 'paulsputer.com'
 theme = ["hugo-video", "PaperMod"]
@@ -9,8 +9,9 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
-[params.analytics.google]
-SiteVerificationTag = "G-7H9QF7N3NN"
+[services]
+  [services.googleAnalytics]
+    id = 'G-7H9QF7N3NN'
 
 [params.cover]
 hidden = false
@@ -105,3 +106,9 @@ keys = [ "title", "permalink", "summary", "content" ]
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[sitemap]
+  changeFreq = 'weekly'
+  disable = false
+  filename = 'sitemap.xml'
+  priority = -1
