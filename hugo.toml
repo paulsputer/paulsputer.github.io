@@ -9,10 +9,6 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
-[services]
-  [services.googleAnalytics]
-    id = 'G-7H9QF7N3NN'
-
 [params.cover]
 hidden = false
 hiddenInList = false
@@ -54,6 +50,7 @@ weight = 30
 env = 'production'
 ShowShareButtons = true
 mainSections = 'posts'
+GoogleAnalyticsID = 'G-7H9QF7N3NN'
 
 [params.profileMode]
 enabled = true
